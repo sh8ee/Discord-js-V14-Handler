@@ -1,0 +1,22 @@
+{
+  "name": "communitybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./Src/Structures/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "glob": "^8.1.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
+    "mongoose": "^6.9.0",
+    "ms": "^2.1.3"
+  }
+}
