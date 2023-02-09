@@ -29,7 +29,7 @@ module.exports = {
             if (!guild.members.me.permissions.has(command.BotPermissions))
                 return Reply(interaction, "❌", `I need \`${command.BotPermissions.join(", ")}\` permission(s) to execute this command!`, true)
 
-        if (command.DevOnly == true && !client.config.devs.includes(user.id))
+        if (command.DevOnly && !client.config.devs.includes(user.id))
             return Reply(interaction, `❌`, `This command is classified!`, true)
 
         command.execute(interaction, client)
