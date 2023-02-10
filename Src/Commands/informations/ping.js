@@ -6,7 +6,10 @@ const { Reply, EditReply } = require("../../../Src/Systems/Reply")
 module.exports = {
     name: "pingss",
     description: 'sssss',
+
+    
     dmPermission: false,
+    DevOnly: false,
 
     /**
      * @param {ChatInputCommandInteraction} interaction 
