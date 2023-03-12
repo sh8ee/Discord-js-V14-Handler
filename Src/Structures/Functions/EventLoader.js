@@ -1,6 +1,6 @@
 const { loadFiles } = require("../Classes/FileLoader");
 const { CustomClient } = require("../Classes/CustomClient")
-const Ascii = require("ascii-table")
+const Ascii = require("ascii-table"); const Table = new Ascii("EVENTS STATUS")
 
 
 /**
@@ -9,7 +9,6 @@ const Ascii = require("ascii-table")
 
 async function loadEvents(client) {
 
-    const Table = new Ascii("EVENTS STATUS")
     const files = await loadFiles("Events")
 
     files.forEach((file) => {

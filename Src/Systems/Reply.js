@@ -8,8 +8,7 @@ const { EmbedBuilder, CommandInteraction } = require("discord.js")
  */
 
 function Reply(interaction, emoji, description, type) {
-interaction.reply({ 
-embeds: [ new EmbedBuilder().setColor("#38b6ff").setDescription(`${emoji} | ${description}`)], ephemeral: type })
+    interaction.reply({ embeds: [new EmbedBuilder().setColor("#38b6ff").setDescription(`${emoji} ${description}`)], ephemeral: type || false })
 }
 
 
@@ -22,8 +21,9 @@ embeds: [ new EmbedBuilder().setColor("#38b6ff").setDescription(`${emoji} | ${de
  */
 
 function EditReply(interaction, emoji, description, type) {
-interaction.editReply({
-embeds: [new EmbedBuilder().setColor("#38b6ff").setDescription(`${emoji} | ${description}`)],  ephemeral: type })
+    interaction.editReply({ embeds: [new EmbedBuilder().setColor("#38b6ff").setDescription(`${emoji} ${description}`)], ephemeral: type || false })
 }
+
+
 
 module.exports = { Reply, EditReply }

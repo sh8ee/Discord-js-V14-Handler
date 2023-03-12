@@ -1,6 +1,6 @@
 const { loadFiles } = require("../Classes/FileLoader");
 const { CustomClient } = require("../Classes/CustomClient")
-const Ascii = require("ascii-table");
+const Ascii = require("ascii-table"); const Table = new Ascii("COMMANDS STATUS")
 
 /**
  * @param {CustomClient} client 
@@ -9,9 +9,7 @@ const Ascii = require("ascii-table");
 async function loadCommands(client) {
 
     const { commands, application } = client
-
-    const Table = new Ascii("COMMANDS STATUS")
-
+ 
     commands.clear()
     let CommandsArray = []
     const files = await loadFiles("Commands")
@@ -29,12 +27,9 @@ async function loadCommands(client) {
 
     })
 
-
     application.commands.set(CommandsArray).then(cmds => {
         cmds.toJSON().forEach(cmd => client.slashData.set(cmd.name, cmd))
     })
-
-
     return console.log(Table.toString())
 
 }
